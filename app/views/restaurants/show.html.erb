@@ -1,6 +1,9 @@
-<%= @restaurant.name %>
+<h1><%= @restaurant.name %></h1>
 
-<%= @restaurant.rating %>
-<%= @restaurant.address %>
+<ul>
+  <li>Rating: <%= @restaurant.rating %></li>
+  <li>Address: <%= @restaurant.address %></li>
+</ul>
 
 <%= link_to "Delete this restaurant", restaurant_path(@restaurant.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant.id) %>
